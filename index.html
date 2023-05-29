@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сніговик</title>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas"); //Шукаємо та зберігаємо елементи canvas
+        let ctx = canvas.getContext("2d");//Отримуємо контекст малювання
+
+        ctx.lineWidth = 6;
+        ctx.strokeStyle = "Bleak";
+
+        ctx.beginPath();//голова
+        ctx.arc(200, 100, 50, 0, Math.PI * 2, false);
+        ctx.stroke();
+
+        ctx.fillStyle = "Blue";
+        ctx.beginPath();//ліве око
+        ctx.arc(185, 90, 8, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "Blue";
+        ctx.beginPath();//праве око
+        ctx.arc(215, 90, 8, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "Yellow";
+        ctx.beginPath();//ніс
+        ctx.arc(200, 110, 8, 0, Math.PI * 2, false);
+        ctx.fill(); 
+
+        ctx.beginPath();//тулуб
+        ctx.arc(200, 220, 70, 0, Math.PI * 2, false);
+        ctx.stroke(); 
+
+        ctx.fillStyle = "Green";
+        ctx.beginPath();//пуговки, в центрі
+        ctx.arc(200, 220, 8, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "Green";
+        ctx.beginPath();//пуговки, в зверху
+        ctx.arc(200, 190, 8, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "Green";
+        ctx.beginPath();//пуговки, в знизу
+        ctx.arc(200, 250, 8, 0, Math.PI * 2, false);
+        ctx.fill();
+    </script>
+</body>
+</html>
